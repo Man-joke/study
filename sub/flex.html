@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        section{
+            padding: 30px;
+            box-sizing: border-box;
+        }
+        h1 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #643BFF;
+            margin-bottom: 20px;
+        }
+        p{font-size: 18px; color: #333;}
+
+        code{background: #e1e1e1;}
+
+        .container {
+            height: 180px;
+            background: #643BFF;
+            margin-bottom: 10px;
+            display: flex;
+            max-width: unset;
+            margin: 0 0;
+        }
+
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            color: #fff;
+            height: 150px;
+        }
+
+        .item:nth-child(1) { background: #FFC447; }
+        .item:nth-child(2) { background: #E87635; }
+        .item:nth-child(3) { background: #FF4847; }
+        .item:nth-child(4) { background: #D335E8; }
+
+        .container1 .item:nth-child(1) { flex-grow: 0; }
+        .container1 .item:nth-child(2) { flex-grow: 0; }
+        .container1 .item:nth-child(3) { flex-grow: 0; }
+        .container1 .item:nth-child(4) { flex-grow: 1; }
+
+        .container2 .item:nth-child(1) { flex-grow: 1; }
+        .container2 .item:nth-child(2) { flex-grow: 3; }
+        .container2 .item:nth-child(3) { flex-grow: 1; }
+        .container2 .item:nth-child(4) { flex-grow: 0; }
+
+        .container3 .item:nth-child(1) { flex-grow: 1; }
+        .container3 .item:nth-child(2) { flex-grow: 2; }
+        .container3 .item:nth-child(3) { flex-grow: 1; }
+        .container3 .item:nth-child(4) { flex-grow: 2; }
+
+
+        .item2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            color: #fff;
+            height: 150px;
+            flex-basis: 120px;
+        }
+
+        .container5 {
+            width: 550px;
+            height: 180px;
+            background: #643BFF;
+            margin-bottom: 10px;
+            display: flex;
+        }
+
+        .container5 .item2:nth-child(1) { background: #FFC447; }
+        .container5 .item2:nth-child(2) { background: #E87635; }
+        .container5 .item2:nth-child(3) { background: #FF4847; }
+        .container5 .item2:nth-child(4) { background: #D335E8; }
+
+        .container5.container2 .item2:nth-child(1) { flex-shrink: 1; }
+        .container5.container2 .item2:nth-child(2) { flex-shrink: 2; }
+        .container5.container2 .item2:nth-child(3) { flex-shrink: 0; }
+        .container5.container2 .item2:nth-child(4) { flex-shrink: 0; }
+
+        .container5.container3 .item2:nth-child(1) { flex-shrink: 1; }
+        .container5.container3 .item2:nth-child(2) { flex-shrink: 4; }
+        .container5.container3 .item2:nth-child(3) { flex-shrink: 1; }
+        .container5.container3 .item2:nth-child(4) { flex-shrink: 1; }
+
+        @media all and (max-width:550px) {
+            .container5{width: 100%;}
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>flex-grow: </h1>
+        <p><code>flex-grow</code> Item의 증가 너비 비율을 설정 (전체 넓이에서 비율적으로 증가)</p>
+        <div class="container container1">
+            <div class="item">0</div>
+            <div class="item">0</div>
+            <div class="item">0</div>
+            <div class="item">1</div>
+        </div>
+
+        <div class="container container2">
+            <div class="item">1</div>
+            <div class="item">3</div>
+            <div class="item">1</div>
+            <div class="item">0</div>
+        </div>
+
+        <div class="container container3">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">1</div>
+            <div class="item">2</div>
+        </div>
+
+        <h1>flex-shrink: </h1>
+        <p><code>flex-shrink</code> Item의 증감 너비 비율을 설정 (전체 넓이에서 비율적으로 감소)</p>
+        <div class="container5 container1">
+            <div class="item2">1</div>
+            <div class="item2">1</div>
+            <div class="item2">1</div>
+            <div class="item2">1</div>
+        </div>
+
+        <div class="container5 container2">
+            <div class="item2">1</div>
+            <div class="item2">2</div>
+            <div class="item2">0</div>
+            <div class="item2">0</div>
+        </div>
+
+        <div class="container5 container3">
+            <div class="item2">1</div>
+            <div class="item2">4</div>
+            <div class="item2">1</div>
+            <div class="item2">1</div>
+        </div>
+    </section>
+</body>
+
+</html>

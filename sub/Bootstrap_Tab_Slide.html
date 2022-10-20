@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <style>
+        .container {margin-top: 150px; }
+        .card-box{ display: flex;}
+        .card{ width: 30rem; }
+
+        @media screen and (max-width:750px) {
+            .nav{ overflow-x: scroll; flex-wrap: nowrap;}
+            .nav::-webkit-scrollbar{display: none;}
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Nav tabs -->
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab">Home</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" >Profile</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" >Messages</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" >Settings</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#home1" type="button" role="tab" >Home1</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile1" type="button" role="tab" >Profile1</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#messages1" type="button" role="tab" >Messages1</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#settings1" type="button" role="tab" >Settings1</button>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane fade show swiper mySwiper active" id="home" role="tabpanel">
+                <div class="card-box swiper-wrapper">
+                    <div class="card swiper-slide" >    
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title1</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Go somewhere</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide" >    
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide" >    
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title3</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide" >    
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title4</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide" >    
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title5</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade swiper mySwiper" id="profile" role="tabpanel">
+                <div class="card-box swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade swiper mySwiper" id="messages" role="tabpanel">
+                <div class="card-box swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title3</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title3</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title3</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title3</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title3</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade swiper mySwiper" id="settings" role="tabpanel">
+                <div class="card-box swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title4</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title4</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title4</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title4</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title4</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade swiper mySwiper" id="home1" role="tabpanel">
+                <div class="card-box swiper-wrapper">
+                    <div class="card swiper-slide" >    
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title1</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Go somewhere</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide" >    
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide" >    
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title3</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide" >    
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title4</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide" >    
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title5</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade swiper mySwiper" id="profile1" role="tabpanel">
+                <div class="card-box swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade swiper mySwiper" id="messages1" role="tabpanel">
+                <div class="card-box swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title3</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title3</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title3</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title3</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title3</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade swiper mySwiper" id="settings1" role="tabpanel">
+                <div class="card-box swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title4</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title4</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title4</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title4</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <img src="/images/dummy.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title4</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+    
+     var swiper = new Swiper(".mySwiper", {
+        slidesPerView:1,
+        spaceBetween: 10,
+        freeMode: true,
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        breakpoints:{
+          750: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+        }
+      });
+    </script>
+</body>
+
+</html>

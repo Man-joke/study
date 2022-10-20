@@ -1,0 +1,33 @@
+pre{margin: 2rem 0; width: 100%; background-color: #e1e1e1; font-size: 16px; border: 1px solid #e1e1e1; border-radius: 15px; color: #222;}
+pre code{width: 100%;}
+small{opacity: 0.5; font-weight: 500;}
+
+.highlight{overflow: hidden;}
+
+
+@media all and (max-width:1500px) {
+    body{padding: 2rem; box-sizing: border-box;}
+    .study{padding: 3rem; box-sizing: border-box;}
+    .study__item{width: 100%; max-width: unset;}
+}
+@media all and (max-width:1200px) {
+    .section{width: 98%;}
+}
+@media all and (max-width:1000px) {
+    .study__list{width: 100%;}   
+    .study__img img{width: auto; height: auto; object-fit: cover;}
+}
+@media all and (max-width:750px) {
+    body{padding: 0;}
+    .section{padding: 2rem; border-radius: 10px;}
+    .study__list{background: none;}
+    .study__item a{flex: 1 1 auto; flex-direction: column; align-items: flex-start; padding: 1.5rem 1rem;}
+    .study__img{margin-bottom: 2rem; width: 100%; box-shadow: 2px 2px 2px 2px rgb(35 35 35 / 10%);}    
+    .study__txt{margin-left: 0;}
+    .code{padding: 2rem 3rem;}
+}
+
+@media all and (max-width:550px){
+    .code-wrap{overflow: auto;}
+    .code{width: 550px;}
+}

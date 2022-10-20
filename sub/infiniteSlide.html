@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        * {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        #slideShow {
+            width: 500px;
+            height: 300px;
+            position: relative;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+
+        .slides {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            transition: 0.5s ease-out;
+        }
+
+        .slides li {
+            float: left;
+            border-radius: 20px;
+            background: #333;
+            line-height: 300px;
+            text-align: center;
+            width: 500px;
+            margin: 0 auto;
+            font-size: 5vw;
+        }
+
+        .controller span {
+            position: absolute;
+            background-color: transparent;
+            color: lack;
+            text-align: center;
+            border-radius: 50%;
+            padding: 10px 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .controller span:hover {
+            color: rgba(255, 0, 0, 1);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <section class="section">
+        <div id="slideShow">
+            <ul class="slides">
+                <li>Slide1</li>
+                <li>Slide2</li>
+                <li>Slide3</li>
+                <li>Slide4</li>
+                <li>Slide5</li>
+            </ul>
+            <p class="controller">
+                <span class="prev">&lang;</span>
+                <span class="next">&rang;</span>
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div>
+            <h2>HTML</h2>
+            <pre>
+    <span class="black"><</span><span class="blue">div</span> id="<span class="red">slideShow</span>"> <span class="gray">//슬라이드 전체를 감싸주는 div</span>
+        <span class="black"><</span><span class="blue">ul</span> class="<span class="red">slides</span>"> <span class="gray">//실제적으로 움직이는 부모요소</span>
+            <span class="black"><</span><span class="blue">li</span><span class="black">></span>Slide1<span class="black"><</span><span class="blue">/li</span><span class="black">></span>  <span class="gray">//각각의 아이템들</span>
+            <span class="black"><</span><span class="blue">li</span><span class="black">></span>Slide2<span class="black"><</span><span class="blue">/li</span><span class="black">></span>  <span class="gray">//각각의 아이템들</span>
+            <span class="black"><</span><span class="blue">li</span><span class="black">></span>Slide3<span class="black"><</span><span class="blue">/li</span><span class="black">></span>  <span class="gray">//각각의 아이템들</span>
+            <span class="black"><</span><span class="blue">li</span><span class="black">></span>Slide4<span class="black"><</span><span class="blue">/li</span><span class="black">></span>  <span class="gray">//각각의 아이템들</span>
+            <span class="black"><</span><span class="blue">li</span><span class="black">></span>Slide5<span class="black"><</span><span class="blue">/li</span><span class="black">></span>  <span class="gray">//각각의 아이템들</span>
+        <span class="black"><</span><span class="blue">/ul</span>>
+        <span class="black"><</span><span class="blue">p</span> class="<span class="red">controller</span>">
+            <span class="black"><</span>span class="<span class="red">prev</span>"><span class="black">&</span>lang;<span><</span class="black">/span<span class="black">></span> <span class="gray">prev 버튼</span>
+            <span class="black"><</span>span class="<span class="red">next</span>"><span class="black">&</span>rang;<span><</span class="black">/span<span class="black">></span> <span class="gray">next 버튼</span>
+        <span class="black"><</span><span class="blue">/p</span>>
+    <span class="black"><</span><span class="blue">/div</span>>
+            </pre>
+        </div>
+    </section>
+    <section class="section">
+        <div>
+            <h2>js</h2>
+            <pre>
+        <span class="blue">function</span> <span style="color: red">makdeClone</span>() {
+            <span class="blue">let</span> cloneSlide_first = slidesItem[0].cloneNode(true)  <span class="gray">//첫번째 li복사</span>
+            <span class="blue">let</span> cloneSlide_last = slides.lastElementChild.cloneNode(true)
+            <span class="gray">// 마지막 li 복사 li의 갯수를 알수 없기 때문에 부모요소에서 마지막 번째를 복사</span>
+            slides.append(cloneSlide_first)
+            slides.insertBefore(cloneSlide_last, slides.firstElementChild)
+        }
+        <span class="blue">function</span> <span sytle="color: red">initfunction</span>() {        
+            slides.style.width = (slideWidth + slideMargin) * (slideCount + 2) + "px"  <span class="gray">//전체 넓이값을 구하기 위함</span>
+            slides.style.left = -(slideWidth + slideMargin) + "px" <span class="gray">//1번 슬라이드가 화면에 보일려면 슬라이드 크기만큼  -Left 해줘야 한다.</span>
+        }
+            </pre>
+        </div>
+        <div>
+            <pre>
+        next.<span class="red">addEventListener</span>('<span class="blue">click</span>', <span class="blue">function</span> () {
+            if (<span class="blue">currentIdx</span> <= <span class="blue">slideCount - 1</span>) {
+                slides.style.left = -(currentIdx + 2) * (slideWidth + slideMargin) + "px"
+                <span class="gray"> -(현재 복사된 슬라이드까지 더해진 값) * (슬라이드 width + 슬라이드 Margin) </span>
+                slides.style.transition = `${0.5}s ease-out`; // 이동속도
+            }
+
+            if (<span class="blue">currentIdx</span> ===<span class="blue"> slideCount - 1</span>) {
+                <span class="gray"> 현재의 슬라이드가 슬라이드갯수랑 같아지면 슬라이드 화면을 초기로 화면 넘김 </span>
+                setTimeout(function () {
+                    slides.style.left = -(slideWidth + slideMargin) + 'px'
+                    slides.style.transition = `${0}s ease-out`
+                }, 500);
+                currentIdx = -1;
+            }
+            currentIdx += 1;
+        })
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>그냥... Swiper 쓰세요... <span  style="font-weight: bold; margin-bottom: 2rem;">정신건강에 도움이 됩니다.</span></h2>
+    </section>
+
+
+
+
+    <script>
+        let slides = document.querySelector('.slides')
+        let slidesItem = slides.querySelectorAll('li')
+
+        let currentIdx = 0;
+        let slideCount = slidesItem.length;
+
+        let prev = document.querySelector('.prev')//이전버튼
+        let next = document.querySelector('.next')//다음버튼
+        let slideWidth;
+        let slideMargin = 0; //슬라이드 간격
+
+        slideItemWidth() //li의 각각의 width값 가져오기
+        makdeClone() //첫번째, 마지막 슬라이드 복사 함수
+        initfunction() // 슬라이드 넓이와 위치값 초기화 함수
+
+        function slideItemWidth() {
+            for (let i = 0; i < slideCount; i++) {
+                slideWidth = slidesItem[i].clientWidth; //슬라이드 넓이
+            }
+        }
+        function makdeClone() {
+            let cloneSlide_first = slidesItem[0].cloneNode(true)  //첫번째 li복사
+            let cloneSlide_last = slides.lastElementChild.cloneNode(true)
+            // 마지막 li 복사 li의 갯수를 알수 없기 때문에 부모요소에서 마지막 번째를 복사
+            slides.append(cloneSlide_first)
+            slides.insertBefore(cloneSlide_last, slides.firstElementChild)
+        }
+        function initfunction() {
+
+            slides.style.width = (slideWidth + slideMargin) * (slideCount + 2) + "px"  //전체 넓이값을 구하기 위함
+            slides.style.left = -(slideWidth + slideMargin) + "px" //1번 슬라이드가 화면에 보일려면 슬라이드 크기만큼  -Left 해줘야 한다.
+        }
+
+        next.addEventListener('click', function () {
+            if (currentIdx <= slideCount - 1) {
+                slides.style.left = -(currentIdx + 2) * (slideWidth + slideMargin) + "px"
+                slides.style.transition = `${0.5}s ease-out`; // 이동속도
+            }
+
+            if (currentIdx === slideCount - 1) {
+                setTimeout(function () {
+                    slides.style.left = -(slideWidth + slideMargin) + 'px'
+                    slides.style.transition = `${0}s ease-out`
+                }, 500);
+                currentIdx = -1;
+            }
+            currentIdx += 1;
+        })
+
+        prev.addEventListener('click', function () {
+            if (currentIdx >= 0) {
+                slides.style.left = -currentIdx * (slideWidth + slideMargin) + "px"
+                //
+                slides.style.transition = `${0.5}s ease-out`; // 이동속도
+            }
+
+            if (currentIdx === 0) {
+                setTimeout(function () {
+                    slides.style.left = -slideCount * (slideWidth + slideMargin) + 'px'
+                    slides.style.left = -slideCount * (slideWidth + slideMargin) + 'px';
+
+                    slides.style.transition = `${0}s ease-out`
+                }, 500);
+                currentIdx = slideCount;
+            }
+            currentIdx -= 1;
+        })
+
+
+
+
+    </script>
+</body>
+
+
+</html>

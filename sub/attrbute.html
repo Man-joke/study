@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        * {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+        }
+
+        .conbox {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .img-box {
+            position: relative;
+            width: 100%;
+            height: 192px;
+            text-align: center;
+        }
+
+        .img-box img {
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+
+        .list {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            box-sizing: border-box;
+            margin-top: 50px;
+        }
+
+        .item {
+            text-align: center;
+        }
+
+        .item a {
+            display: block;
+            color: #222;
+            padding: 0 10px;
+            height: 35;
+            box-sizing: border-box;
+            border: 1px solid #222;
+        }
+
+        .item a:hover {
+            background: #666;
+        }
+
+        .item a:hover p {
+            color: #fff;
+        }
+
+        @media all and (max-width:750px) {
+            h2{font-size: 1.5rem;}
+            .item a{padding: 0 6px;}
+            .list p{font-size: 1.4rem;}
+        }
+        @media all and (max-width:750px) {
+           .list p{font-size: 1rem;}
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <section class="section">
+        <div class="conbox">
+            <div class="img-box">
+                <h2>슬램덩크</h2>
+                <img src="../images/slamdunk.png" alt="슬램덩크">
+            </div>
+            <ul class="list">
+                <li class="item">
+                    <a href="#">
+                        <p class="item-title" data-name="slamdunk">슬램덩크</p>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <p class="item-title" data-name="black">블랙클로버</p>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <p class="item-title" data-name="berserk">베르세르크</p>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <p class="item-title" data-name="stone">닥터스톤</p>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <p class="item-title" data-name="umblella">엄브렐라 아카데미</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="group">
+            <h2>바닐라 자바스크립트로 <code>data-</code> 값 가져오기</h2>
+            <p><code>h2</code>에 텍스트 활성화</p>
+            <p><code>img</code>요소 <code>src</code> 값 넣기</p>
+            <p><code>img</code>요소 <code>alt</code> 값 넣기</p>
+            <div class="code-wrap">
+                <div class="code">
+                    <p>&lt;script&gt;</p>
+                    <p class="mL20">let item = document.querySelectorAll(".item");</p>
+                    <p class="mL20">let imgTitle = document.querySelector(".img-box h2");</p>
+                    <p class="mL20">let img = document.querySelector(".img-box img");</p>
+                    <br>
+                    <p class="mL20">item.forEach(element => {</p>
+                    <p class="mL40">element.addEventListener("mouseenter", function(e){ </p>
+                    <p class="mL40">let a = this.innerText;</p>
+                    <p class="mL40">imgTitle.innerText = a;</p>
+                    <br>
+                    <p class="mL40">let b = this.childNodes;</p>
+                    <p class="mL40">let c = b[1].childNodes</p>
+                    <p class="mL40">let d = c[1].getAttribute('data-name')</p>
+                    <br>
+                    <p class="mL40">img.alt = a;</p>
+                    <p class="mL40">img.src = "../images/" + d + ".png";</p>
+                    <p class="mL40">})</p>
+                    <p class="mL20">});</p>
+                    <p>&lt;/script&gt;</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let item = document.querySelectorAll(".item");
+        let imgTitle = document.querySelector(".img-box h2");
+        let img = document.querySelector(".img-box img");
+
+        item.forEach(element => {
+            element.addEventListener("mouseenter", function (e) {
+                let a = this.innerText;
+                imgTitle.innerText = a;
+
+                let b = this.childNodes;
+                let c = b[1].childNodes
+                let d = c[1].getAttribute('data-name')
+
+                img.alt = a;
+                img.src = "../images/" + d + ".png";
+            })
+        });
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스케일</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<section class="section">
+    <h2>일정화면 비율 작아지기</h2>
+    <div class="cod-wrap">
+        <pre>
+    function resizeApply() { 
+        var minWidth = 1200;
+        var body = document.getElementsByTagName('body')[0];
+        if (window.innerWidth < minWidth) { 
+            body.style.zoom = (window.innerWidth / minWidth); 
+        } else body.style.zoom = 1; 
+    } 
+    window.onload = function() { 
+        window.addEventListener('resize', function() { 
+            resizeApply(); 
+        }); 
+    } resizeApply();
+        </pre>
+    </div>
+    <p>
+        resizeApply 함수는 화면 사이즈가 minWidth 미만인 경우에 zoom 값을 조정합니다.
+        그리고 window.onload는 페이지의 리소스가 모두 로드 되면 실행되며,
+        창의 넓이가 조정되면 resizeApply를 실행하도록 이벤트를 추가했습니다.
+    </p>
+</section>
+    
+    <script>
+        function resizeApply() { 
+            var minWidth = 1200;
+            var body = document.getElementsByTagName('body')[0];
+            if (window.innerWidth < minWidth) { 
+                body.style.zoom = (window.innerWidth / minWidth); 
+            } else body.style.zoom = 1; 
+        } 
+        window.onload = function() { 
+            window.addEventListener('resize', function() { 
+                resizeApply(); 
+            }); 
+        }
+        resizeApply();
+
+    </script>
+</body>
+</html>

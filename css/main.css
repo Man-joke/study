@@ -1,0 +1,16 @@
+html{font-size: 10px;}
+body{font-size: 1rem; background: #bfc4ea; word-break: keep-all;}
+
+.study__title{display: inline-block; font-size: 3.5rem; color: #000; font-weight: 900; margin-bottom: 2rem;}
+.study__title:hover{color: blueviolet;}
+.study__item{display: flex; align-items: center; margin: 1rem 0; background: #f3f4ff;  border: 1px solid #e1e1e1; border-radius: 1.5rem; overflow: hidden; transition: all 0.3s; box-shadow: inset 2px 2px 2px rgb(0 0 0 / 10%);}
+.study__item a{display: flex; align-items: center; padding: 2rem 3rem;  box-sizing: border-box;}
+.study__img{display: flex; align-items: center; justify-content: center; width: 9rem; height: 10rem; background: #fff; text-align: center; vertical-align: middle; border-radius: 1rem; box-shadow: 4px 4px 4px 4px rgba(35,35,35,0.2);}.study__img img{width: 6.5rem; height: 9rem;}
+.study__txt{ margin-left: 2.5rem;}
+.study__item h2{display: flex; align-items: center; font-size: 2.2rem; font-weight: 600;}
+.study__item p{margin-top: 1.6rem; font-size: 1.6rem; line-height: 2.2rem; color: #666; letter-spacing: 0.3px;}
+.study__item:hover{background: #c7deff; transition: all 0.3s; transform: translate(-0.5rem, -0.5rem); box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.1);}
+.study__item:hover h2{color: #000;}
+.study__item:hover p{color: #666;}
+
+
