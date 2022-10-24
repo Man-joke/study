@@ -5,22 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
-    <style>
-        div{ height: 3000px; overflow-y:auto;}
-    </style>
 </head>
 <body>
-    <div></div>
-
-    <script>
-        
-        window.addEventListener('scroll', function(){
-            ws = window.scrollY - 500
-            if(ws <= window.scrollY){
-                console.log(5);
-            }
-        })
-    </script>
+    <button>클릭하는 버튼</button>
 </body>
+
+<script>
+    const btn = document.querySelector('button')
+    
+    btn.addEventListener('click', function(e){
+        console.log(e.target)
+    })
+</script>
 </html>
